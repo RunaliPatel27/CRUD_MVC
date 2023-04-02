@@ -1,0 +1,25 @@
+﻿@model Sample_CRUD.Models.UpdateBooksModel
+@{
+}
+<h1>Edit Book Details</h1>
+<form method="post" action="View" class="mt-5"> 
+    <div class="mb-3">
+        <label for="" class="form-label">Book Id</label>
+        <input type="text" class="form-control" asp-for="Id" readonly>
+    </div>
+    <div class="mb-3">
+        <label for="" class="form-label">Book Title</label>
+        <input type="text" class="form-control" asp-for="BookTitle">
+    </div>
+    <div class="mb-3">
+        <label for="" class="form-label">Book Author</label>
+        <input type="text" class="form-control" asp-for="BookAuthor">
+    </div>
+    <div class="mb-3">
+        <label for="" class="form-label">Book Pages</label>
+        <input type="number" class="form-control" asp-for="BookPages">
+    </div>
+      
+    <button type="submit" class="btn btn-primary">Submit</button>
+    <button type="submit" class="btn btn-danger" asp-action="Delete" asp-controller="Books">Delete</button>
+</form>
